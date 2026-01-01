@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide 5 - Team (Light)</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #000; }
+        .slide {
+            width: 1080px; height: 1080px;
+            background: linear-gradient(160deg, #f8faf8 0%, #f0f5f0 50%, #e8f0e8 100%);
+            position: relative; overflow: hidden;
+        }
+        .bg-glow { position: absolute; border-radius: 50%; filter: blur(150px); opacity: 0.35; }
+        .bg-glow.green { width: 400px; height: 400px; background: #22c55e; top: 100px; right: -100px; }
+        .accent-line { position: absolute; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, transparent, #22c55e, #14b8a6, #22c55e, transparent); }
+        .accent-line.top { top: 0; }
+        .accent-line.bottom { bottom: 0; }
+        .logo { position: absolute; top: 35px; left: 50%; transform: translateX(-50%); width: 180px; z-index: 20; }
+        .content { position: relative; z-index: 10; padding: 60px; padding-top: 100px; height: 100%; display: flex; flex-direction: column; }
+        .section-title {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 24px; font-weight: 700; letter-spacing: 10px;
+            color: #16a34a; margin-bottom: 40px;
+        }
+        .photo-container {
+            width: 100%; height: 380px;
+            border-radius: 20px; overflow: hidden;
+            margin-bottom: 40px;
+            border: 2px solid rgba(34,197,94,0.3);
+        }
+        .photo-container img { width: 100%; height: 100%; object-fit: cover; }
+        .milestones { display: flex; flex-direction: column; gap: 25px; }
+        .milestone { display: flex; align-items: center; gap: 25px; }
+        .milestone-icon {
+            width: 16px; height: 16px;
+            background: #22c55e; border-radius: 50%;
+            box-shadow: 0 0 20px rgba(34,197,94,0.4);
+            flex-shrink: 0;
+        }
+        .milestone-text {
+            font-family: 'Fraunces', serif;
+            font-size: 32px; color: #1a2e1a;
+        }
+        .milestone-text em { font-style: italic; color: #4a8050; }
+        .footer-text {
+            margin-top: auto; text-align: center;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 20px; color: #9ca39c; letter-spacing: 3px;
+        }
+        .footer-text span { color: #16a34a; }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="bg-glow green"></div>
+        <div class="accent-line top"></div>
+        <div class="accent-line bottom"></div>
+        <img src="../logo_light.svg" class="logo" alt="Sustainability Lab">
+        <div class="content">
+            <div class="section-title">MILESTONES</div>
+            <div class="photo-container">
+                <img src="https://sustainability-lab.github.io/images/memories/2025-Akshardham-all.jpg" alt="Team">
+            </div>
+            <div class="milestones">
+                <div class="milestone">
+                    <div class="milestone-icon"></div>
+                    <div class="milestone-text">PhD: <em>Dr. Rishiraj Adhikary</em></div>
+                </div>
+                <div class="milestone">
+                    <div class="milestone-icon"></div>
+                    <div class="milestone-text">MTech Grads: <em>Poornima, Prince, Shataxi</em></div>
+                </div>
+                <div class="milestone">
+                    <div class="milestone-icon"></div>
+                    <div class="milestone-text">ACM Summer School: <em>AI for Social Good</em></div>
+                </div>
+            </div>
+            <div class="footer-text">sustainability-lab.github.io</div>
+        </div>
+    </div>
+</body>
+</html>

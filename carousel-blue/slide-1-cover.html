@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide 1 - Cover (Blue)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #000; }
+        .slide {
+            width: 1080px; height: 1080px;
+            background: linear-gradient(160deg, #0a0e1a 0%, #0f1629 50%, #0a0f1f 100%);
+            position: relative; overflow: hidden;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+        }
+        .bg-glow { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.2; }
+        .bg-glow.cyan { width: 500px; height: 500px; background: #00d4ff; top: -150px; right: -150px; }
+        .bg-glow.purple { width: 400px; height: 400px; background: #7c3aed; bottom: -100px; left: -100px; }
+        .accent-line { position: absolute; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, transparent, #00d4ff, #0099ff, #00d4ff, transparent); }
+        .accent-line.top { top: 0; }
+        .accent-line.bottom { bottom: 0; }
+        .grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px); background-size: 50px 50px; }
+        .content { position: relative; z-index: 10; padding: 60px; }
+        .logo { width: 320px; margin-bottom: 50px; }
+        .year { font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: 15px; color: #00d4ff; margin-bottom: 30px; }
+        .title { font-family: 'Crimson Pro', serif; font-size: 120px; font-weight: 400; color: #f0f4ff; line-height: 1; margin-bottom: 20px; }
+        .title em { font-style: italic; background: linear-gradient(135deg, #00d4ff, #0099ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .lab-name { font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: 12px; color: #8b9cc7; margin-top: 40px; }
+        .swipe { position: absolute; bottom: 50px; font-family: 'Space Grotesk', sans-serif; font-size: 18px; color: #555; letter-spacing: 3px; }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="bg-glow cyan"></div>
+        <div class="bg-glow purple"></div>
+        <div class="accent-line top"></div>
+        <div class="accent-line bottom"></div>
+        <div class="grid-bg"></div>
+        <div class="content">
+            <img src="../logo_dark.svg" class="logo" alt="Sustainability Lab">
+            <div class="year">2025</div>
+            <h1 class="title">Year in<br><em>Review</em></h1>
+            <div class="lab-name">SUSTAINABILITY LAB</div>
+        </div>
+        <div class="swipe">SWIPE FOR MORE</div>
+    </div>
+</body>
+</html>

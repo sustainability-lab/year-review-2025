@@ -3,14 +3,31 @@ const path = require('path');
 const fs = require('fs');
 
 const files = [
+    // Main posters
     { input: 'sustainability-lab-2025-review.html', output: 'sustainability-lab-2025.png', selector: '.poster' },
     { input: 'version-2-blue.html', output: 'version-2-blue.png', selector: '.poster' },
     { input: 'version-3-light.html', output: 'version-3-light.png', selector: '.poster' },
+
+    // Carousel - Theme 1 (Gold)
     { input: 'carousel/slide-1-cover.html', output: 'carousel/slide-1-cover.png', selector: '.slide' },
     { input: 'carousel/slide-2-stats.html', output: 'carousel/slide-2-stats.png', selector: '.slide' },
     { input: 'carousel/slide-3-awards.html', output: 'carousel/slide-3-awards.png', selector: '.slide' },
     { input: 'carousel/slide-4-publications.html', output: 'carousel/slide-4-publications.png', selector: '.slide' },
     { input: 'carousel/slide-5-team.html', output: 'carousel/slide-5-team.png', selector: '.slide' },
+
+    // Carousel - Theme 2 (Blue)
+    { input: 'carousel-blue/slide-1-cover.html', output: 'carousel-blue/slide-1-cover.png', selector: '.slide' },
+    { input: 'carousel-blue/slide-2-stats.html', output: 'carousel-blue/slide-2-stats.png', selector: '.slide' },
+    { input: 'carousel-blue/slide-3-awards.html', output: 'carousel-blue/slide-3-awards.png', selector: '.slide' },
+    { input: 'carousel-blue/slide-4-publications.html', output: 'carousel-blue/slide-4-publications.png', selector: '.slide' },
+    { input: 'carousel-blue/slide-5-team.html', output: 'carousel-blue/slide-5-team.png', selector: '.slide' },
+
+    // Carousel - Theme 3 (Light)
+    { input: 'carousel-light/slide-1-cover.html', output: 'carousel-light/slide-1-cover.png', selector: '.slide' },
+    { input: 'carousel-light/slide-2-stats.html', output: 'carousel-light/slide-2-stats.png', selector: '.slide' },
+    { input: 'carousel-light/slide-3-awards.html', output: 'carousel-light/slide-3-awards.png', selector: '.slide' },
+    { input: 'carousel-light/slide-4-publications.html', output: 'carousel-light/slide-4-publications.png', selector: '.slide' },
+    { input: 'carousel-light/slide-5-team.html', output: 'carousel-light/slide-5-team.png', selector: '.slide' },
 ];
 
 (async () => {

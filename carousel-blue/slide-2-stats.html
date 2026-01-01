@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide 2 - Stats (Blue)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #000; }
+        .slide {
+            width: 1080px; height: 1080px;
+            background: linear-gradient(160deg, #0a0e1a 0%, #0f1629 50%, #0a0f1f 100%);
+            position: relative; overflow: hidden;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+        }
+        .bg-glow { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.15; }
+        .bg-glow.cyan { width: 600px; height: 600px; background: #00d4ff; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .accent-line { position: absolute; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, transparent, #00d4ff, #0099ff, #00d4ff, transparent); }
+        .accent-line.top { top: 0; }
+        .accent-line.bottom { bottom: 0; }
+        .grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px); background-size: 50px 50px; }
+        .logo { position: absolute; top: 40px; left: 50%; transform: translateX(-50%); width: 200px; z-index: 20; }
+        .content { position: relative; z-index: 10; padding: 60px; width: 100%; padding-top: 100px; }
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px; font-weight: 700; letter-spacing: 10px;
+            color: #00d4ff; text-align: center; margin-bottom: 60px;
+        }
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px 80px; max-width: 800px; margin: 0 auto; }
+        .stat { text-align: center; }
+        .stat-number {
+            font-family: 'Crimson Pro', serif;
+            font-size: 160px; font-weight: 700;
+            background: linear-gradient(180deg, #00d4ff, #0099ff);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+        .stat-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px; font-weight: 600;
+            color: #8b9cc7; letter-spacing: 5px; margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="bg-glow cyan"></div>
+        <div class="accent-line top"></div>
+        <div class="accent-line bottom"></div>
+        <div class="grid-bg"></div>
+        <img src="../logo_dark.svg" class="logo" alt="Sustainability Lab">
+        <div class="content">
+            <div class="section-title">BY THE NUMBERS</div>
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">PUBLICATIONS</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">AWARDS</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">PHD</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">MTECH GRADS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -2,39 +2,61 @@
 
 LinkedIn poster and carousel for the Sustainability Lab at IIT Gandhinagar.
 
-## Poster Versions
+## Theme Options (Vote!)
 
-| Version | Theme | Files |
-|---------|-------|-------|
-| Version 1 | Black & Gold | `sustainability-lab-2025-review.html` / `.png` |
-| Version 2 | Blue & Cyan | `version-2-blue.html` / `.png` |
-| Version 3 | Light & Green | `version-3-light.html` / `.png` |
+We have 3 theme options. Vote for your favorite!
 
-## Carousel (5 slides)
+### Theme 1: Black & Gold (Classic)
+Dark elegant theme with gold accents.
+- Poster: `sustainability-lab-2025-review.html`
+- Carousel: `carousel/` folder
 
-Square format (1080x1080px) for LinkedIn carousel posts:
+### Theme 2: Blue & Cyan (Tech)
+Modern tech-inspired theme with blue/cyan gradients.
+- Poster: `version-2-blue.html`
+- Carousel: `carousel-blue/` folder
+
+### Theme 3: Light & Green (Sustainability)
+Fresh light theme with green accents.
+- Poster: `version-3-light.html`
+- Carousel: `carousel-light/` folder
+
+## File Structure
 
 ```
-carousel/
-├── slide-1-cover.png      # Title slide with logo
-├── slide-2-stats.png      # Big numbers (7 pubs, 6 awards, etc.)
-├── slide-3-awards.png     # Key awards
-├── slide-4-publications.png  # Venue badges
-└── slide-5-team.png       # Milestones with photo
+year-review-2025/
+├── sustainability-lab-2025-review.html  # Theme 1 poster
+├── version-2-blue.html                  # Theme 2 poster
+├── version-3-light.html                 # Theme 3 poster
+├── carousel/                            # Theme 1 carousel (5 slides)
+│   ├── slide-1-cover.html
+│   ├── slide-2-stats.html
+│   ├── slide-3-awards.html
+│   ├── slide-4-publications.html
+│   └── slide-5-team.html
+├── carousel-blue/                       # Theme 2 carousel (5 slides)
+│   └── ...
+├── carousel-light/                      # Theme 3 carousel (5 slides)
+│   └── ...
+├── logo_light.svg / logo_dark.svg       # Lab logos
+├── alum.jpeg                            # Alumni photo
+└── linkedin-post.md                     # Post text
 ```
 
-## Other Files
-
-- `linkedin-post.md` - Post text with hashtags
-- `logo_light.svg` / `logo_dark.svg` - Lab logos
-- `alum.jpeg` - Alumni photo
-
-## Preview
+## Preview All Themes
 
 ```bash
+# Theme 1 - Black & Gold
 open sustainability-lab-2025-review.html
+open carousel/slide-1-cover.html
+
+# Theme 2 - Blue & Cyan
 open version-2-blue.html
+open carousel-blue/slide-1-cover.html
+
+# Theme 3 - Light & Green
 open version-3-light.html
+open carousel-light/slide-1-cover.html
 ```
 
 ## Generate All PNGs

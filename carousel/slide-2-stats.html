@@ -34,7 +34,8 @@
         .gold-line { position: absolute; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, transparent, #ffd700, #ffb800, #ffd700, transparent); }
         .gold-line.top { top: 0; }
         .gold-line.bottom { bottom: 0; }
-        .content { position: relative; z-index: 10; padding: 60px; width: 100%; }
+        .logo { position: absolute; top: 40px; left: 50%; transform: translateX(-50%); width: 200px; z-index: 20; }
+        .content { position: relative; z-index: 10; padding: 60px; width: 100%; padding-top: 100px; }
         .section-title {
             font-family: 'Outfit', sans-serif;
             font-size: 24px;
@@ -78,6 +79,7 @@
         <div class="bg-glow gold"></div>
         <div class="gold-line top"></div>
         <div class="gold-line bottom"></div>
+        <img src="../logo_dark.svg" class="logo" alt="Sustainability Lab">
         <div class="content">
             <div class="section-title">BY THE NUMBERS</div>
             <div class="stats-grid">
