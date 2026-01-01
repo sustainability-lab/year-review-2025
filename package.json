@@ -1,0 +1,12 @@
+{
+  "name": "sustainability-lab-year-review-2025",
+  "version": "1.0.0",
+  "description": "Year in Review 2025 poster for Sustainability Lab, IIT Gandhinagar",
+  "scripts": {
+    "capture": "node capture.js",
+    "preview": "open sustainability-lab-2025-review.html"
+  },
+  "dependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}
