@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide 3 - Awards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+        .slide {
+            width: 1080px;
+            height: 1080px;
+            background: linear-gradient(160deg, #050505 0%, #0a0a0a 50%, #0f0f0f 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.1;
+        }
+        .bg-glow.gold { width: 400px; height: 400px; background: #ffd700; top: -100px; left: -100px; }
+        .bg-glow.amber { width: 350px; height: 350px; background: #ff8c00; bottom: -80px; right: -80px; }
+        .gold-line { position: absolute; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, transparent, #ffd700, #ffb800, #ffd700, transparent); }
+        .gold-line.top { top: 0; }
+        .gold-line.bottom { bottom: 0; }
+        .content { position: relative; z-index: 10; padding: 70px; height: 100%; display: flex; flex-direction: column; }
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 10px;
+            color: #ffd700;
+            margin-bottom: 50px;
+        }
+        .awards-list { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 35px; }
+        .award {
+            border-left: 4px solid #ffd700;
+            padding-left: 30px;
+        }
+        .award-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #f8f6f0;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        .award-recipient {
+            font-family: 'Outfit', sans-serif;
+            font-size: 22px;
+            color: #c4a962;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="bg-glow gold"></div>
+        <div class="bg-glow amber"></div>
+        <div class="gold-line top"></div>
+        <div class="gold-line bottom"></div>
+        <div class="content">
+            <div class="section-title">AWARDS & HONORS</div>
+            <div class="awards-list">
+                <div class="award">
+                    <div class="award-name">Test of Time Award — NILMTK</div>
+                    <div class="award-recipient">Prof. Nipun Batra</div>
+                </div>
+                <div class="award">
+                    <div class="award-name">SIGEnergy Rising Star Award</div>
+                    <div class="award-recipient">Prof. Nipun Batra</div>
+                </div>
+                <div class="award">
+                    <div class="award-name">Excellence in Teaching Award</div>
+                    <div class="award-recipient">Prof. Nipun Batra</div>
+                </div>
+                <div class="award">
+                    <div class="award-name">Commendation for Outstanding Research</div>
+                    <div class="award-recipient">Dr. Rishiraj Adhikary</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

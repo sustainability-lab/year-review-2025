@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Lab - 2025 Year in Review (Blue)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-navy: #0a0e1a;
+            --midnight: #0f1629;
+            --accent-cyan: #00d4ff;
+            --accent-blue: #0099ff;
+            --accent-purple: #7c3aed;
+            --soft-white: #f0f4ff;
+            --muted-blue: #8b9cc7;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .poster {
+            width: 1200px;
+            height: 1500px;
+            background: linear-gradient(160deg, var(--deep-navy) 0%, var(--midnight) 50%, #0a0f1f 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bg-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.2;
+        }
+        .bg-glow.cyan { width: 400px; height: 400px; background: var(--accent-cyan); top: -100px; right: -100px; }
+        .bg-glow.purple { width: 350px; height: 350px; background: var(--accent-purple); bottom: 200px; left: -150px; }
+        .bg-glow.blue { width: 300px; height: 300px; background: var(--accent-blue); bottom: -100px; right: 200px; }
+
+        .grid-lines {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            padding: 45px 55px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+
+        .year-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            color: var(--deep-navy);
+            margin-bottom: 18px;
+        }
+
+        .main-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 76px;
+            font-weight: 400;
+            color: var(--soft-white);
+            line-height: 0.95;
+            margin-bottom: 12px;
+        }
+
+        .main-title em {
+            font-style: italic;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .lab-name {
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 10px;
+            color: var(--muted-blue);
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            height: 450px;
+            margin-bottom: 28px;
+        }
+
+        .photo-frame {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid rgba(0,212,255,0.2);
+        }
+
+        .photo-frame::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(10,14,26,0.9) 100%);
+        }
+
+        .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+        .photo-frame.featured { grid-row: span 2; }
+
+        .photo-label {
+            position: absolute;
+            bottom: 12px;
+            left: 14px;
+            z-index: 3;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--soft-white);
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 70px;
+            padding: 25px 0;
+            margin-bottom: 22px;
+            border-top: 1px solid rgba(0,212,255,0.15);
+            border-bottom: 1px solid rgba(0,212,255,0.15);
+        }
+
+        .stat-item { text-align: center; }
+
+        .stat-number {
+            font-size: 60px;
+            font-weight: 700;
+            background: linear-gradient(180deg, var(--accent-cyan), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--muted-blue);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 8px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .section {
+            background: rgba(0,212,255,0.03);
+            border: 1px solid rgba(0,212,255,0.1);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(0,212,255,0.1);
+        }
+
+        .section-icon {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, rgba(0,212,255,0.2), rgba(0,153,255,0.1));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-icon svg { width: 14px; height: 14px; fill: var(--accent-cyan); }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: var(--soft-white);
+        }
+
+        .award-item { padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+        .award-item:last-child { border-bottom: none; }
+
+        .award-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 15px;
+            color: var(--soft-white);
+            margin-bottom: 3px;
+        }
+
+        .award-recipient { font-size: 12px; color: var(--accent-cyan); font-weight: 500; }
+
+        .pub-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 9px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        .pub-item:last-child { border-bottom: none; }
+
+        .pub-badge {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            color: var(--deep-navy);
+            font-size: 9px;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .pub-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 15px;
+            color: var(--soft-white);
+        }
+
+        .milestone-item {
+            display: flex;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        .milestone-item:last-child { border-bottom: none; }
+
+        .milestone-marker {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-cyan);
+            border-radius: 50%;
+            margin-top: 5px;
+            box-shadow: 0 0 15px var(--accent-cyan);
+        }
+
+        .milestone-title { font-size: 14px; font-weight: 500; color: var(--soft-white); margin-bottom: 2px; }
+        .milestone-detail { font-size: 12px; color: var(--muted-blue); }
+
+        .photo-strip {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            height: 180px;
+        }
+
+        .photo-strip .photo-frame { flex: 1; }
+        .photo-strip .photo-frame.wide { flex: 1.5; }
+
+        .footer {
+            margin-top: 20px;
+            padding-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(0,212,255,0.1);
+        }
+
+        .footer-left { display: flex; align-items: center; gap: 20px; }
+        .iitgn-text { font-size: 14px; font-weight: 600; letter-spacing: 4px; color: var(--muted-blue); }
+        .footer-divider { width: 1px; height: 18px; background: rgba(0,212,255,0.3); }
+        .footer-url { font-size: 13px; color: var(--accent-cyan); }
+        .footer-tagline { font-family: 'Crimson Pro', serif; font-style: italic; font-size: 15px; color: var(--muted-blue); }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="bg-glow cyan"></div>
+        <div class="bg-glow purple"></div>
+        <div class="bg-glow blue"></div>
+        <div class="grid-lines"></div>
+
+        <div class="content">
+            <header class="header">
+                <div class="year-badge">2025</div>
+                <h1 class="main-title">Year in <em>Review</em></h1>
+                <div class="lab-name">SUSTAINABILITY LAB</div>
+            </header>
+
+            <div class="photo-gallery">
+                <div class="photo-frame featured">
+                    <img src="https://sustainability-lab.github.io/images/memories/2025-Akshardham-all.jpg" alt="Team">
+                    <span class="photo-label">Team Celebration</span>
+                </div>
+                <div class="photo-frame"><img src="https://sustainability-lab.github.io/images/memories/2025-acm-summer-school-2.jpg" alt="Summer School"><span class="photo-label">Summer School</span></div>
+                <div class="photo-frame"><img src="https://sustainability-lab.github.io/images/memories/2025-graduating-mtech-1.jpg" alt="Graduation"><span class="photo-label">Graduation</span></div>
+                <div class="photo-frame"><img src="alum.jpeg" alt="Alumni"><span class="photo-label">Alumni</span></div>
+                <div class="photo-frame"><img src="https://sustainability-lab.github.io/images/memories/2025-acm-summer-school-1.jpg" alt="AI for Social Good"><span class="photo-label">AI for Social Good</span></div>
+                <div class="photo-frame"><img src="https://sustainability-lab.github.io/images/memories/Dinner-Jan-2025.jpg" alt="Dinner"><span class="photo-label">Team Dinner</span></div>
+                <div class="photo-frame"><img src="https://sustainability-lab.github.io/images/memories/2025-Akshardham-finalyear.jpg" alt="Final Year"><span class="photo-label">Final Year</span></div>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-item"><div class="stat-number">7</div><div class="stat-label">Publications</div></div>
+                <div class="stat-item"><div class="stat-number">6</div><div class="stat-label">Awards</div></div>
+                <div class="stat-item"><div class="stat-number">3</div><div class="stat-label">MTech Grads</div></div>
+                <div class="stat-item"><div class="stat-number">1</div><div class="stat-label">PhD</div></div>
+            </div>
+
+            <div class="content-grid">
+                <section class="section">
+                    <div class="section-header">
+                        <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg></div>
+                        <h2 class="section-title">AWARDS</h2>
+                    </div>
+                    <div class="award-item"><div class="award-name">Test of Time Award — NILMTK</div><div class="award-recipient">Prof. Nipun Batra</div></div>
+                    <div class="award-item"><div class="award-name">SIGEnergy Rising Star Award</div><div class="award-recipient">Prof. Nipun Batra</div></div>
+                    <div class="award-item"><div class="award-name">Excellence in Teaching Award</div><div class="award-recipient">Prof. Nipun Batra</div></div>
+                    <div class="award-item"><div class="award-name">Commendation for Outstanding Research</div><div class="award-recipient">Dr. Rishiraj Adhikary</div></div>
+                    <div class="award-item"><div class="award-name">Third Prize — Simply Speaking 4.0</div><div class="award-recipient">Shataxi Dubey</div></div>
+                    <div class="award-item"><div class="award-name">Third Prize — UG Research Showcase</div><div class="award-recipient">Shrimay Shah & Dhruv Gupta</div></div>
+                </section>
+
+                <section class="section">
+                    <div class="section-header">
+                        <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z"/></svg></div>
+                        <h2 class="section-title">PUBLICATIONS</h2>
+                    </div>
+                    <div class="pub-item"><div class="pub-badge">AAAI</div><div class="pub-name">Air-Quality Sensor Placement</div></div>
+                    <div class="pub-item"><div class="pub-badge">NeurIPS</div><div class="pub-name">SentinelKilnDB</div></div>
+                    <div class="pub-item"><div class="pub-badge">ACM JCSS</div><div class="pub-name">Space to Policy: Brick Kilns</div></div>
+                    <div class="pub-item"><div class="pub-badge">CODS</div><div class="pub-name">VayuBench & VayuChat</div></div>
+                    <div class="pub-item"><div class="pub-badge">JBE</div><div class="pub-name">DRL for Building Control</div></div>
+                    <div class="pub-item"><div class="pub-badge">PRD</div><div class="pub-name">3HDM Active Learning</div></div>
+                </section>
+
+                <section class="section">
+                    <div class="section-header">
+                        <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM9 17H7V10H9V17ZM13 17H11V7H13V17ZM17 17H15V13H17V17Z"/></svg></div>
+                        <h2 class="section-title">MILESTONES</h2>
+                    </div>
+                    <div class="milestone-item"><div class="milestone-marker"></div><div class="milestone-content"><div class="milestone-title">PhD Completion</div><div class="milestone-detail">Dr. Rishiraj Adhikary</div></div></div>
+                    <div class="milestone-item"><div class="milestone-marker"></div><div class="milestone-content"><div class="milestone-title">ACM India Summer School</div><div class="milestone-detail">AI for Social Good</div></div></div>
+                    <div class="milestone-item"><div class="milestone-marker"></div><div class="milestone-content"><div class="milestone-title">MTech Graduates</div><div class="milestone-detail">Poornima, Prince, Shataxi</div></div></div>
+                </section>
+            </div>
+
+            <div class="photo-strip">
+                <div class="photo-frame"><img src="https://sustainability-lab.github.io/images/memories/2025-graduating-mtech-2.jpg" alt="Grads"><span class="photo-label">MTech Graduates 2025</span></div>
+                <div class="photo-frame wide"><img src="https://sustainability-lab.github.io/images/memories/2025-graduating-mtech-3.jpg" alt="Group"><span class="photo-label">Graduation Day</span></div>
+                <div class="photo-frame"><img src="https://sustainability-lab.github.io/images/memories/Curiosity.jpg" alt="Curiosity"><span class="photo-label">Curiosity Carnival</span></div>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-left">
+                    <div class="iitgn-text">IIT GANDHINAGAR</div>
+                    <div class="footer-divider"></div>
+                    <div class="footer-url">sustainability-lab.github.io</div>
+                </div>
+                <div class="footer-tagline">Building a sustainable future through AI</div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide 1 - Cover</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+        .slide {
+            width: 1080px;
+            height: 1080px;
+            background: linear-gradient(160deg, #050505 0%, #0a0a0a 50%, #0f0f0f 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .bg-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.15;
+        }
+        .bg-glow.gold { width: 500px; height: 500px; background: #ffd700; top: -150px; right: -150px; }
+        .bg-glow.amber { width: 400px; height: 400px; background: #ff8c00; bottom: -100px; left: -100px; }
+        .gold-line { position: absolute; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, transparent, #ffd700, #ffb800, #ffd700, transparent); }
+        .gold-line.top { top: 0; }
+        .gold-line.bottom { bottom: 0; }
+        .content { position: relative; z-index: 10; padding: 60px; }
+        .logo { width: 180px; margin-bottom: 50px; }
+        .year {
+            font-family: 'Outfit', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 15px;
+            color: #ffd700;
+            margin-bottom: 30px;
+        }
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 120px;
+            font-weight: 400;
+            color: #f8f6f0;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        .title em {
+            font-style: italic;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .lab-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 12px;
+            color: #a09080;
+            margin-top: 40px;
+        }
+        .swipe {
+            position: absolute;
+            bottom: 50px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            color: #666;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="bg-glow gold"></div>
+        <div class="bg-glow amber"></div>
+        <div class="gold-line top"></div>
+        <div class="gold-line bottom"></div>
+        <div class="content">
+            <img src="../logo_dark.svg" class="logo" alt="Sustainability Lab">
+            <div class="year">2025</div>
+            <h1 class="title">Year in<br><em>Review</em></h1>
+            <div class="lab-name">SUSTAINABILITY LAB</div>
+        </div>
+        <div class="swipe">SWIPE FOR MORE</div>
+    </div>
+</body>
+</html>

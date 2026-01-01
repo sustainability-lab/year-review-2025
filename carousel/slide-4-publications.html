@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide 4 - Publications</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+        .slide {
+            width: 1080px;
+            height: 1080px;
+            background: linear-gradient(160deg, #050505 0%, #0a0a0a 50%, #0f0f0f 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.1;
+        }
+        .bg-glow.gold { width: 500px; height: 500px; background: #ffd700; bottom: -150px; left: 50%; transform: translateX(-50%); }
+        .gold-line { position: absolute; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, transparent, #ffd700, #ffb800, #ffd700, transparent); }
+        .gold-line.top { top: 0; }
+        .gold-line.bottom { bottom: 0; }
+        .content { position: relative; z-index: 10; padding: 70px; height: 100%; display: flex; flex-direction: column; }
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 10px;
+            color: #ffd700;
+            margin-bottom: 50px;
+        }
+        .pubs-grid { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 25px; }
+        .pub {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            background: rgba(255,215,0,0.03);
+            border: 1px solid rgba(255,215,0,0.1);
+            border-radius: 16px;
+            padding: 25px 30px;
+        }
+        .pub-badge {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #050505;
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 12px 20px;
+            border-radius: 10px;
+            min-width: 140px;
+            text-align: center;
+        }
+        .pub-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #f8f6f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="bg-glow gold"></div>
+        <div class="gold-line top"></div>
+        <div class="gold-line bottom"></div>
+        <div class="content">
+            <div class="section-title">PUBLICATIONS</div>
+            <div class="pubs-grid">
+                <div class="pub">
+                    <div class="pub-badge">AAAI</div>
+                    <div class="pub-name">Air-Quality Sensor Placement</div>
+                </div>
+                <div class="pub">
+                    <div class="pub-badge">NeurIPS</div>
+                    <div class="pub-name">SentinelKilnDB</div>
+                </div>
+                <div class="pub">
+                    <div class="pub-badge">ACM JCSS</div>
+                    <div class="pub-name">Space to Policy: Brick Kilns</div>
+                </div>
+                <div class="pub">
+                    <div class="pub-badge">CODS</div>
+                    <div class="pub-name">VayuBench & VayuChat</div>
+                </div>
+                <div class="pub">
+                    <div class="pub-badge">JBE</div>
+                    <div class="pub-name">DRL for Building Control</div>
+                </div>
+                <div class="pub">
+                    <div class="pub-badge">PRD</div>
+                    <div class="pub-name">3HDM Active Learning</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

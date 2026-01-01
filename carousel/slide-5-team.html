@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide 5 - Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+        .slide {
+            width: 1080px;
+            height: 1080px;
+            background: linear-gradient(160deg, #050505 0%, #0a0a0a 50%, #0f0f0f 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.12;
+        }
+        .bg-glow.gold { width: 400px; height: 400px; background: #ffd700; top: 100px; right: -100px; }
+        .gold-line { position: absolute; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, transparent, #ffd700, #ffb800, #ffd700, transparent); }
+        .gold-line.top { top: 0; }
+        .gold-line.bottom { bottom: 0; }
+        .content { position: relative; z-index: 10; padding: 60px; height: 100%; display: flex; flex-direction: column; }
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 10px;
+            color: #ffd700;
+            margin-bottom: 40px;
+        }
+        .photo-container {
+            width: 100%;
+            height: 380px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            border: 2px solid rgba(255,215,0,0.2);
+        }
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .milestones { display: flex; flex-direction: column; gap: 25px; }
+        .milestone {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .milestone-icon {
+            width: 16px;
+            height: 16px;
+            background: #ffd700;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255,215,0,0.5);
+            flex-shrink: 0;
+        }
+        .milestone-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #f8f6f0;
+        }
+        .milestone-text em {
+            font-style: italic;
+            color: #c4a962;
+        }
+        .footer-text {
+            margin-top: auto;
+            text-align: center;
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            color: #666;
+            letter-spacing: 3px;
+        }
+        .footer-text span { color: #ffd700; }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="bg-glow gold"></div>
+        <div class="gold-line top"></div>
+        <div class="gold-line bottom"></div>
+        <div class="content">
+            <div class="section-title">MILESTONES</div>
+            <div class="photo-container">
+                <img src="https://sustainability-lab.github.io/images/memories/2025-Akshardham-all.jpg" alt="Team">
+            </div>
+            <div class="milestones">
+                <div class="milestone">
+                    <div class="milestone-icon"></div>
+                    <div class="milestone-text">PhD: <em>Dr. Rishiraj Adhikary</em></div>
+                </div>
+                <div class="milestone">
+                    <div class="milestone-icon"></div>
+                    <div class="milestone-text">MTech Grads: <em>Poornima, Prince, Shataxi</em></div>
+                </div>
+                <div class="milestone">
+                    <div class="milestone-icon"></div>
+                    <div class="milestone-text">ACM Summer School: <em>AI for Social Good</em></div>
+                </div>
+            </div>
+            <div class="footer-text">sustainability-lab.github.io</div>
+        </div>
+    </div>
+</body>
+</html>
